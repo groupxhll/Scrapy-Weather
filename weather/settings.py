@@ -13,9 +13,13 @@ BOT_NAME = 'weather'
 
 SPIDER_MODULES = ['weather.spiders']
 NEWSPIDER_MODULE = 'weather.spiders'
-ITEM_PIPELINES = {'weather.pipelines.W2mysql':300,
-                  'weather.pipelines.W2json': 400,
+
+# 定义处理items的顺序
+# 每个pipeline后面的数值确定了它们的运行顺序，数字越小越优先，数值的范围是0~1000
+ITEM_PIPELINES = {'weather.pipelines.W2json': 400,
                   'weather.pipelines.WeatherPipeline': 500}
+
+# 解决网页使用本地代理无法访问的问题，报错信息: HTTP status code is not handled or not allowed
 HTTPERROR_ALLOWED_CODES = [403]
 
 
