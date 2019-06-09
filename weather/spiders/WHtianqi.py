@@ -15,7 +15,7 @@ class WhtianqiSpider(scrapy.Spider):
         sixday = response.xpath('/html/body/div[5]/div/div[2]/div[2]')
 
         # 循环选出每天的信息，并将其加入items中
-        for i in range(0,6):
+        for i in range(0,7):
             # 申请一个WeatherItem类型，用于保存结果
             item = WeatherItem()
 
