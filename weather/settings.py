@@ -13,7 +13,8 @@ BOT_NAME = 'weather'
 
 SPIDER_MODULES = ['weather.spiders']
 NEWSPIDER_MODULE = 'weather.spiders'
-ITEM_PIPELINES = {'weather.pipelines.W2json': 400,
+ITEM_PIPELINES = {'weather.pipelines.W2mysql':300,
+                  'weather.pipelines.W2json': 400,
                   'weather.pipelines.WeatherPipeline': 500}
 HTTPERROR_ALLOWED_CODES = [403]
 
