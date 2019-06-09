@@ -8,14 +8,14 @@
 import scrapy
 
 
-class WeatherItem(scrapy.Item):
+class WeatherItem(scrapy.Item): # 希望获取的字段名
     # define the fields for your item here like:
     # name = scrapy.Field()
-    date = scrapy.Field()
-    week = scrapy.Field()
-    img = scrapy.Field()
-    hightemperature = scrapy.Field()
-    lowtemperature = scrapy.Field()
-    weather = scrapy.Field()
-    wind = scrapy.Field()
+    date = scrapy.Field() # 日期
+    week = scrapy.Field() # 星期
+    img = scrapy.Field() # 图片
+    hightemperature = scrapy.Field() # 当天最高温
+    lowtemperature = scrapy.Field() # 当天最低温
+    weather = scrapy.Field() # 天气
+    wind = scrapy.Field() # 风向
     pass
