@@ -8,6 +8,7 @@ import os
 import requests
 import json
 import codecs
+import pymysql
 
 class WeatherPipeline(object):
     def process_item(self, item, spider):
