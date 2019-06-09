@@ -12,9 +12,13 @@ import pymysql
 
 class WeatherPipeline(object):
     def process_item(self, item, spider):
+        # 获取当前工作目录
         base_dir = os.getcwd()
+        
+        # 文件存在工作目录中data目录下的weather.txt文件内
         fiename = base_dir + '/data/weather.txt'
 
+        # 以追加的方式打开文件，并写入对应的数据
         with open(fiename, 'a') as f:
             f.write(item['date'] + '\n')
             f.write(item['week'] + '\n')
@@ -22,8 +26,9 @@ class WeatherPipeline(object):
             f.write(item['weather'] + '\n')
             f.write(item['wind'] + '\n\n')
 
+        # 下载图片
         with open(base_dir + '/data/' + item['date'] + '.png', 'wb') as f:
-            f.write(requests.get(item['img']).content)
+            f.write(requests.get("https:"+item['img']).content)
 
         return item
 
@@ -32,9 +37,11 @@ class W2json(object):
         base_dir = os.getcwd()
         filename = base_dir + '/data/weather.json'
 
+        # 打开json文件，向里面以dumps的方式写入数据
         with codecs.open(filename, 'a') as f:
-            line = json.dumps(dict(item), ensure_ascii=False) + '\n'
-            f.write(line)
+            # json.dumps 序列化时对中文默认使用的ascii编码.想输出真正的中文需要指定ensure_ascii=False
+            line = json.dumps(dict(item), ensure_ascii=False)
+            f.write(line+'\n')
 
         return item
 
