@@ -4,7 +4,7 @@ from weather.items import WeatherItem
 
 class WhtianqiSpider(scrapy.Spider):
     name = 'WHtianqi'
-    allowed_domains = ['https://www.tianqi.com/wuhan']
+    allowed_domains = ['www.tianqi.com/wuhan']
     start_urls = ['https://www.tianqi.com/wuhan']
 
     def parse(self, response):
