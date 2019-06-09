@@ -1,5 +1,4 @@
-# Scrapy-Weather
-python小组项目说明文档
+# Scrapy-Weather项目说明文档
 
 a)项目信息
 
