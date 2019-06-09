@@ -47,16 +47,8 @@ class W2json(object):
 
 class W2mysql(object):
     def process_item(self,item,spider):
-        #将item里的数据拿出来
-        """date = item['date']
-        week = item['week']
-        temperature = item['temperature']
-        weather = item['weather']
-        wind = item['wind']
-        img = item['img']"""
-        #WhtianqiSpider.parse()
+        
         #和本地的scrapyDB数据库连接
-
         connection = pymysql.connect(
             host='localhost',
             user='root',
@@ -69,16 +61,17 @@ class W2mysql(object):
         try:
             with connection.cursor() as cursor:
                 #创建更新值的sql语句
-                sql = "INSERT INTO WEATHER(date,week,lowtemperature,hightemperature,weather,wind,img) VALUES 
-                      (%s,%s,%s,%s,%s,%s,%s)"
+                sql = "INSERT INTO WEATHER(date,week,lowtemperature,hightemperature,weather,wind,img) VALUES (%s,%s,%s,%s,%s,%s,%s)"
 
                 #执行sql语句
-                #excute的第二个参数可以将sql缺省语句补全，一般以元组格式
+                #excute的第二个参数将sql缺省语句补全
                 cursor.execute(sql,(item['date'],item['week'],item['lowtemperature'],item['hightemperature'],item['weather'],item['wind'],item['img']))
 
+            # 提交本次插入的记录
             connection.commit()
 
         finally:
+            # 关闭连接
             connection.close()
 
         return item
