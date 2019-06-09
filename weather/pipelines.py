@@ -37,6 +37,7 @@ class W2json(object):
             f.write(line)
 
         return item
+
 class W2mysql(object):
     def process_item(self,item,spider):
         #将item里的数据拿出来
