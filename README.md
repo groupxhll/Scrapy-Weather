@@ -21,7 +21,6 @@
 
 #### e)使用的方法/资源   
 &emsp;&emsp;[scrapy文档](https://scrapy-chs.readthedocs.io/zh_CN/0.24/intro/tutorial.html#id4)  
-&emsp;&emsp;[知乎博客](https://zhuanlan.zhihu.com/p/26885412)  
 &emsp;&emsp;[twist等相关包的下载资源](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pywin32)
 
 f)其他
