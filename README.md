@@ -6,13 +6,13 @@
 #### b)作者信息及详细的分工和完成情况  
 |name|work|result|  
 |--- |----| ---  |
-|刘亭玉|主题代码|完成   |
-|何志琛|主题代码|完成  |
+|刘亭玉|数据的爬取|完成   |
+|何志琛|数据写入数据库|完成  |
 |刘玥滢|修改代码|完成  |
 |许智超|测试代码|完成  |
-#### c)开发环境/运行环境
+#### c)开发环境，/运行环境
 &emsp;&emsp;开发环境：window 10 Anconda spider  
-&emsp;&emsp;运行环境： windows PowerShell
+&emsp;&emsp;运行环境： windows PowerShell  Mac OS
 #### d)系统架构/关键技术
 - scrapy框架  
 - 用xpath定位网页中天气信息的位置  
