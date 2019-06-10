@@ -5,16 +5,14 @@
 
 #### b)作者信息及详细的分工和完成情况  
 |name|work|result|  
-|---   |----   | ---  |
-|刘亭玉|主体代码| 完成 |
-|何志琛|主体代码| 完成 |
-|刘玥滢|修改代码| 完成 |
-|许智超|测试代码| 完成 |
+|--- |----| ---  |
+|    |    |      |
+|    |    |      |
+|    |    |      |
+|    |    |      |
 #### c)开发环境/运行环境
-&emsp;&emsp;开发环境：Windows 10 Anconda spider & Microsoft Visual Studio Code
-
-&emsp;&emsp;运行环境： Windows PowerShell & Mac OS
-
+&emsp;&emsp;开发环境：window 10 Anconda spider  
+&emsp;&emsp;运行环境： windows PowerShell
 #### d)系统架构/关键技术
 - scrapy框架  
 - 用xpath定位网页中天气信息的位置  
@@ -22,7 +20,7 @@
 
 #### e)使用的方法/资源   
 &emsp;&emsp;[scrapy文档](https://scrapy-chs.readthedocs.io/zh_CN/0.24/intro/tutorial.html#id4)  
-&emsp;&emsp;[xpath文档](http://www.w3school.com.cn/xpath/xpath_syntax.asp)    
+&emsp;&emsp;[xpath w3school教程](http://www.w3school.com.cn/xpath/index.asp) 
 &emsp;&emsp;[twist等相关包的下载资源](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pywin32)
 
 f)其他
